@@ -125,7 +125,7 @@ fn main() -> io::Result<()> {
 ## Relationship to Tokio
 
 Romio is a fork of another Rust project called [Tokio][tokio]. The Tokio
-project would use an older version of the futures API which was not compatible with
+project once used an older version of the futures API which was not compatible with
 the new "async/await" syntax. In order to enable people to experiment with
 "async/await," Romio ported parts of the tokio project to the newer futures API
 which was compatible with that syntax.
