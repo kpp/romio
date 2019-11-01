@@ -139,9 +139,9 @@ asynchronous IO.
 
 Romio was intended to unblock people trying to experiment with async/await,
 so that it exposed such a minimal API. It was not intended to be a full
-fledged "competitor" to tokio, which we expected would eventually move to the
-newer futures API and be compatible with async/await syntax. Since async/await
-landed to stable, there is no need to use romio to experiment with this feature.
+fledged "competitor" to tokio, which has now moved to the
+newer futures API and became compatible with async/await syntax. Since async/await
+landed in stable, there is no need to use romio to experiment with this feature.
 
 ## License
 
