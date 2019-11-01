@@ -125,10 +125,10 @@ fn main() -> io::Result<()> {
 ## Relationship to Tokio
 
 Romio is a fork of another Rust project called [Tokio][tokio]. The Tokio
-project uses an older version of the futures API which is not compatible with
+project would use an older version of the futures API which was not compatible with
 the new "async/await" syntax. In order to enable people to experiment with
-"async/await," Romio ports parts of the tokio project to the newer futures API
-which is compatible with that syntax.
+"async/await," Romio ported parts of the tokio project to the newer futures API
+which was compatible with that syntax.
 
 Romio is not a complete port of tokio: it only contains a small part of the
 entire tokio code base: the IO primitives necessary for writing asynchronous
@@ -137,15 +137,11 @@ instead, all async IO primitives use the default reactor set up - and it
 doesn't contain many other parts of tokio that are not directly related to
 asynchronous IO.
 
-You should use romio if you want to experiment with writing networking code
-using the new async/await syntax. However, romio is not directly compatible
-with other libraries built on top of tokio - like hyper, actix, and tower - so
-if you want to use those, romio might not be a good fit for you.
-
-Romio is intended to unblock people trying to experiment with async/await,
-which is why it exposes such a minimal API. It's not intended to be a full
-fledged "competitor" to tokio, which we expect will eventually move to the
-newer futures API and be compatible with async/await syntax.
+Romio was intended to unblock people trying to experiment with async/await,
+so that it exposed such a minimal API. It was not intended to be a full
+fledged "competitor" to tokio, which we expected would eventually move to the
+newer futures API and be compatible with async/await syntax. Since async/await
+landed to stable, there is no need to use romio to experiment with this feature.
 
 ## License
 
